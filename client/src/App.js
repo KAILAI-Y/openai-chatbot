@@ -6,11 +6,15 @@ import "./App.css";
 function App() {
   const [inputPrompt, setInputPrompt] = useState("");
   const [chatLog, setChatLog] = useState([]);
+  // loading
+  const [isLoading, setIsLoading] = useState(false);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (inputPrompt.trim() !== "") {
+      setIsLoading(true);
       setChatLog([...chatLog, { userMessage: inputPrompt }]);
       
       try {
@@ -30,6 +34,7 @@ function App() {
         console.error(err);
       }
 
+      setIsLoading(false);
       setInputPrompt("");
     }
   };
@@ -38,6 +43,7 @@ function App() {
     <div className="App">
       <h1>Chatbot</h1>
       <ChatLog chatLog={chatLog} />
+      {isLoading && <p>Loading...</p>}
       <ChatInput 
         inputPrompt={inputPrompt}
         setInputPrompt={setInputPrompt}
