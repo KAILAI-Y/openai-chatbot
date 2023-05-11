@@ -12,32 +12,41 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (inputPrompt.trim() !== "") {
       setIsLoading(true);
-      setChatLog([...chatLog, { userMessage: inputPrompt }]);
-      
+  
+      let botMessage = '';
       try {
         const response = await fetch("http://localhost:4000/", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ message: inputPrompt }),
         });
-        const data = await response.json();
-        console.log(inputPrompt)
-        console.log(data)
-        setChatLog([
-          ...chatLog,
-          { userMessage: inputPrompt, botMessage: data.data.content },
-        ]);
+
+        // check HTTP status
+        if (response.ok) {
+          const data = await response.json();
+          botMessage = data.data.content;
+        } else {
+          // status error
+          console.error('Error:', response.status, response.statusText);
+          botMessage = 'Sorry, there was an error processing your message.';
+        }
       } catch (err) {
         console.error(err);
       }
-
+    
+      setChatLog(prevChatLog => [
+        ...prevChatLog,
+        { userMessage: inputPrompt, botMessage },
+      ]);
+  
       setIsLoading(false);
       setInputPrompt("");
     }
   };
+  
 
   return (
     <div className="App">
