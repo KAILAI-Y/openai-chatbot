@@ -1,0 +1,9 @@
+.chatContainer {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
