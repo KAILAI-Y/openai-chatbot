@@ -1,9 +1,39 @@
 .chatContainer {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    height: 400px;
-    overflow-y: auto;
-    margin-bottom: 20px;
-  }
-  
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  height: 400px;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+.message {
+  margin-bottom: 10px;
+  clear: both;
+}
+
+/* user message style */
+.user-message{
+  background-color: #e5e5ea;
+  color: #000;
+  padding: 8px;
+  border-radius: 5px;
+  display: block;
+  float: right;
+  clear: both;
+  max-width: 60%;
+  margin: 10px;
+}
+
+/* bot message style */
+.bot-message {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  display: block;
+  float: left;
+  clear: both;
+  max-width: 60%;
+  margin: 10px;
+}

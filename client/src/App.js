@@ -27,6 +27,7 @@ function App() {
         // check HTTP status
         if (response.ok) {
           const data = await response.json();
+          console.log(data)
           botMessage = data.data.content;
         } else {
           // status error

@@ -13,12 +13,17 @@ function ChatLog({ chatLog }) {
   return (
     <div className="chatContainer">
       {chatLog.map((chat, idx) => (
-        <div key={idx}>
-          <p><strong>User:</strong> {chat.userMessage}</p>
-          {chat.botMessage && <p><strong>Bot:</strong> {chat.botMessage}</p>}
+        <div key={idx} ref={chatLogRef} className='message'>
+          <p className='user-message'>
+            <strong>User:</strong> {chat.userMessage}
+          </p>
+          {chat.botMessage && (
+          <p className='bot-message'>
+            <strong>Bot:</strong> {chat.botMessage}
+          </p>
+          )}
         </div>
       ))}
-      <div ref={chatLogRef}></div>
     </div>
   );
 }
