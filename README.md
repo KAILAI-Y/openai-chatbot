@@ -16,7 +16,7 @@ To run this project, follow these steps:
 ###### 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/KAILAI-Y/openai-api-learn.git
 ```
 
 ###### 2. Install dependencies:
@@ -51,6 +51,6 @@ npm start
 ```
 
 
-##Usage
+## Usage
 
 Once you've started the application, you can interact with the chatbot by typing messages into the input field and pressing the 'Send' button. The chatbot's responses will appear in the chat log above the input field.
