@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ChatLog from "./components/ChatLog";
 import ChatInput from "./components/ChatInput";
+// import { GlobalStyle } from "./style";
+import { GlobalFontStyle } from "./statics/iconfont/iconfont";
 import "./App.css";
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
   
     if (inputPrompt.trim() !== "") {
       setIsLoading(true);
+      setInputPrompt("");
   
       let botMessage = '';
       try {
@@ -44,21 +47,25 @@ function App() {
       ]);
   
       setIsLoading(false);
-      setInputPrompt("");
     }
   };
   
 
   return (
     <div className="App">
+      <GlobalFontStyle />
       <h1>Chatbot</h1>
-      <ChatLog chatLog={chatLog} />
+      <div className="chat-bot">
+        <ChatLog chatLog={chatLog} />
+      </div>
       {isLoading && <p>Loading...</p>}
-      <ChatInput 
-        inputPrompt={inputPrompt}
-        setInputPrompt={setInputPrompt}
-        handleSubmit={handleSubmit}
-      />
+      <div className="chat-input">
+        <ChatInput 
+          inputPrompt={inputPrompt}
+          setInputPrompt={setInputPrompt}
+          handleSubmit={handleSubmit}
+        />
+      </div>
     </div>
   );
 }

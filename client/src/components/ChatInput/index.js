@@ -10,7 +10,9 @@ function ChatInput({ inputPrompt, setInputPrompt, handleSubmit }) {
         onChange={(e) => setInputPrompt(e.target.value)}
         placeholder="Type your message..."
       />
-      <button type="submit">Send</button>
+      <button type="submit">
+        <i className="iconfont">&#xe661;</i>
+      </button>    
     </form>
   );
 }

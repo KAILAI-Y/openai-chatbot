@@ -14,14 +14,24 @@ function ChatLog({ chatLog }) {
     <div className="chatContainer">
       {chatLog.map((chat, idx) => (
         <div key={idx} ref={chatLogRef} className='message'>
-          <p className='user-message'>
-            <strong>User:</strong> {chat.userMessage}
-          </p>
-          {chat.botMessage && (
-          <p className='bot-message'>
-            <strong>Bot:</strong> {chat.botMessage}
-          </p>
-          )}
+          <div className='user'>
+            <div className='user-avatar'>
+              <i className="iconfont">&#xe7ae;</i>
+            </div>
+            <div className='user-prompt'>{chat.userMessage}</div>
+          </div>
+          {chat.botMessage && (<div className='bot'>
+            <div className='bot-avatar'>
+              <i className="iconfont">&#xe644;</i>
+            </div>
+            <div className='bot-response'>
+              <span
+                  dangerouslySetInnerHTML={{
+                    __html: chat.botMessage.replace(/\n/g, "<br />")
+                  }}
+              />
+            </div>
+          </div>)}
         </div>
       ))}
     </div>

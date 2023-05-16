@@ -1,21 +1,28 @@
 .chatInputContainer {
     display: flex;
-  }
-  
-  .chatInputContainer input {
-    flex-grow: 1;
-    padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    /* box-shadow: 0 0 5px #ccc; */
   }
-  
-  .chatInputContainer button {
-    margin-left: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
-    cursor: pointer;
-  }
+
+.chatInputContainer input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  /* border-radius: 5px; */
+  /* border: 1px solid #ccc; */
+}
+
+.chatInputContainer button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  /* background-color: #007BFF; */
+  background-color: transparent;
+  color: #007BFF;
+  cursor: pointer;
+}
+
+
   
