@@ -67,6 +67,7 @@ Once you've started the application, you can interact with the chatbot by typing
 ![Lastest View](/view.png)
 
 ## Technologies Used
+
 - React
 - OpenAI's GPT-3.5-turbo
 - Styled Components

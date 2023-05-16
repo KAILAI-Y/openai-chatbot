@@ -55,11 +55,11 @@ function App() {
     <div className="App">
       <GlobalFontStyle />
       <ReactMarkdown />
-      <h1>Chatbot</h1>
+      <h1 className="chat-title">Chatbot</h1>
       <div className="chat-bot">
         <ChatLog chatLog={chatLog} />
       </div>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <p className="loading">Loading...</p>}
       <div className="chat-input">
         <ChatInput 
           inputPrompt={inputPrompt}
