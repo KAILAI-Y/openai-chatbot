@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ChatLog from "./components/ChatLog";
 import ChatInput from "./components/ChatInput";
-// import { GlobalStyle } from "./style";
+import ReactMarkdown from 'react-markdown';
 import { GlobalFontStyle } from "./statics/iconfont/iconfont";
 import "./App.css";
 
@@ -54,6 +54,7 @@ function App() {
   return (
     <div className="App">
       <GlobalFontStyle />
+      <ReactMarkdown />
       <h1>Chatbot</h1>
       <div className="chat-bot">
         <ChatLog chatLog={chatLog} />

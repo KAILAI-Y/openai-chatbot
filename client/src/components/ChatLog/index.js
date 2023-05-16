@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import ReactMarkdown from 'react-markdown';
 import './styles.css';
 
 function ChatLog({ chatLog }) {
@@ -25,11 +26,9 @@ function ChatLog({ chatLog }) {
               <i className="iconfont">&#xe644;</i>
             </div>
             <div className='bot-response'>
-              <span
-                  dangerouslySetInnerHTML={{
-                    __html: chat.botMessage.replace(/\n/g, "<br />")
-                  }}
-              />
+              <ReactMarkdown>
+                {chat.botMessage}
+              </ReactMarkdown>
             </div>
           </div>)}
         </div>
