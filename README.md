@@ -2,6 +2,14 @@
 
 This project is a simple chatbot application that uses OpenAI's GPT-3 model to generate responses. It's built with React on the frontend, Express on the backend, and uses OpenAI's API for chat completion.
 
+## Features
+
+- Conversational interface with user and bot messages.
+- Use of OpenAI's GPT-3.5-turbo for generating bot responses.
+- Markdown rendering for bot responses.
+- Iconfont for user and bot avatars.
+- Styling with `styled-components` for chat log, user messages and bot responses.
+
 ## Project Structure
 
 The project is split into two main parts:
@@ -54,3 +62,13 @@ npm start
 ## Usage
 
 Once you've started the application, you can interact with the chatbot by typing messages into the input field and pressing the 'Send' button. The chatbot's responses will appear in the chat log above the input field.
+
+## Lastest View
+![Lastest View](/view.png)
+
+## Technologies Used
+- React
+- OpenAI's GPT-3.5-turbo
+- Styled Components
+- Iconfont
+- React Markdown
