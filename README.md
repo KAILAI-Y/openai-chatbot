@@ -54,3 +54,7 @@ npm start
 ## Usage
 
 Once you've started the application, you can interact with the chatbot by typing messages into the input field and pressing the 'Send' button. The chatbot's responses will appear in the chat log above the input field.
+
+## Latest View
+<img width="1184" alt="Screenshot 2023-05-15 at 21 59 11" src="https://github.com/KAILAI-Y/openai-api-learn/assets/48574336/ef5d5493-28f4-48f4-8e1a-66e779f4c3f7">
+
